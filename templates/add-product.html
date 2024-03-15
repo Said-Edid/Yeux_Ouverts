@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+{% from 'bootstrap5/form.html' import render_field %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Yeux Ouverts | Producto</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='/assets/favicon.ico') }}">
+    {{ bootstrap.load_css() }}
+</head>
+<body class="text-center">
+    <form class="form-add container" method="post">
+        <a href="{{ url_for('get_home') }}">
+            <img class="mb-4 img-fluid" src="{{ url_for('static', filename='/assets/logo.png') }}" alt="company logo" width="400">
+        </a>
+        {% if is_edit: %}
+        <h1 class="h3 font-weight-normal text-start">Editar Producto</h1>
+        {% else: %}
+        <h1 class="h3 font-weight-normal text-start">Nuevo Producto</h1>
+        {% endif %}
+        <div class="mb-3 row text-start">
+            {{ form.csrf_token() }}
+            {{ render_field(form.description, form_group_classes='col-12') }}
+            {{ render_field(form.img_url_one, form_group_classes='col-4 mt-3') }}
+            {{ render_field(form.img_url_two, form_group_classes='col-4 mt-3') }}
+            {{ render_field(form.img_url_three, form_group_classes='col-4 mt-3') }}
+            {{ render_field(form.sizes, form_group_classes='col-4 mt-3') }}
+            {{ render_field(form.materials, form_group_classes='col-4 mt-3') }}
+            {{ render_field(form.colors, form_group_classes='col-4 mt-3') }}
+            {{ render_field(form.price, form_group_classes='col-6 mt-3') }}
+            {{ render_field(form.other, form_group_classes='col-6 mt-3') }}
+        </div>
+        {{ render_field(form.submit, button_map={'submit': 'dark'}, class='d-grid gap-2 d-flex justify-content-start') }}
+        <p class="mt-5 mb-3 text-muted">© Yeux Ouverts</p>
+    </form>
+</body>
+</html>

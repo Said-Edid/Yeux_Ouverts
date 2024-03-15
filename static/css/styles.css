@@ -1,0 +1,264 @@
+/* Commentaries section */
+
+#commentary {
+    background-color: black;
+    background-size: cover;
+    height: 80vh;
+}
+
+/* Google Fonts */
+
+.inter-500 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+/* Website Headers */
+
+#main-header-logo {
+    margin-top: -3rem;
+}
+
+.main-header .callout {
+    width: 70%;
+    max-width: 600px;
+    text-align: center;
+    text-justify: inter-word;
+    color: rgb(110, 110, 115);
+    font-size: 19px;
+    line-height: 1.3;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+}
+
+.page-header {
+    font-size: 30px;
+    line-height: 1.08349;
+    font-weight: 400;
+    letter-spacing: -.002em;
+}
+
+.card-body h1 {
+    font-size: calc(0.9rem + 0.9vw);
+}
+
+.card-body p {
+    text-align: center;
+    text-justify: inter-word;
+    color: rgb(110, 110, 115);
+    font-size: 1rem;
+    line-height: 1.3;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+}
+
+/* Buttons */
+
+button .anchor-cotizar {
+    text-decoration: none;
+    color: black;
+}
+div .btn-cotizar {
+    background-color: white;
+    border-color: black;
+    width: 285px;
+}
+
+button .anchor-cotizar:hover {
+    text-decoration: none;
+    color: white;
+}
+
+div .btn-cotizar:hover {
+    color: white;
+    background-color: black;
+}
+
+/* Carousel, customer reviews */
+
+.carousel-caption h5 {
+    color: black;
+}
+
+.carousel-caption p {
+    color: black;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    background-color: black;
+    border-radius: 50%;
+    padding: 15%;
+}
+
+/* Album Animations */
+
+/* On-Scroll Animation */
+
+[data-aos^=zoom][data-aos^=zoom] {
+    opacity: 0;
+    transition-property: opacity,transform
+}
+
+[data-aos^=zoom][data-aos^=zoom].aos-animate {
+    opacity: 1;
+    transform: translateZ(0) scale(1)
+}
+
+[data-aos=zoom-in] {
+    transform: scale(.6)
+}
+
+/* Zoom in and out Animation */
+
+.zoom {
+  transition: transform .2s; /* Animation */
+}
+
+.zoom:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+/* Register Form */
+
+#name {
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+body > form > div > div:nth-child(3), .register-email {
+    border-radius: 0 !important;
+    margin-bottom: 0 !important;
+    border-top: 0 !important;
+}
+
+/* Login Form */
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+body > form > div > div:nth-child(2), #email {
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+#password {
+    border-top-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top: 0;
+    margin-bottom: 10px;
+}
+
+.form-signin input[type="password"] {
+
+}
+
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Add Product Form */
+
+.form-add {
+    width: 100%;
+    padding: 15px;
+    margin: auto;
+}
+
+/* Contact Form */
+
+header.masthead {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-top: calc(8rem + 57px);
+  padding-bottom: 8rem;
+  background: no-repeat
+  background-size: cover;
+  background-attachment: scroll;
+}
+header.masthead:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #212529;
+  opacity: 0.5;
+}
+header.masthead .page-heading,
+header.masthead .post-heading,
+header.masthead .site-heading {
+  color: #fff;
+}
+header.masthead .page-heading,
+header.masthead .site-heading {
+  text-align: center;
+}
+header.masthead .page-heading h1, header.masthead .page-heading .h1,
+header.masthead .site-heading h1,
+header.masthead .site-heading .h1 {
+  font-size: 3rem;
+}
+header.masthead .page-heading .subheading,
+header.masthead .site-heading .subheading {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.1;
+  display: block;
+  margin-top: 0.625rem;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.masthead .post-heading h1, header.masthead .post-heading .h1 {
+  font-size: 2.25rem;
+}
+header.masthead .post-heading .meta,
+header.masthead .post-heading .subheading {
+  line-height: 1.1;
+  display: block;
+}
+header.masthead .post-heading .subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.75rem 0 2rem;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.masthead .post-heading .meta {
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+  font-family: "Lora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.masthead .post-heading .meta a {
+  color: #fff;
+}
+@media (min-width: 992px) {
+  header.masthead {
+    padding-top: 12.5rem;
+    padding-bottom: 12.5rem;
+  }
+  header.masthead .page-heading h1, header.masthead .page-heading .h1,
+  header.masthead .site-heading h1,
+  header.masthead .site-heading .h1 {
+    font-size: 5rem;
+  }
+  header.masthead .post-heading h1, header.masthead .post-heading .h1 {
+    font-size: 3.5rem;
+  }
+  header.masthead .post-heading .subheading {
+    font-size: 1.875rem;
+  }
+}
