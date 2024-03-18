@@ -1,5 +1,5 @@
 from forms import ContactForm, RegisterForm, LoginForm, ProductForm
-from flask import Flask, render_template, request, abort, redirect, url_for, flash
+from flask import Flask, render_template, request, abort, redirect, url_for, flash, send_from_directory
 from flask_bootstrap import Bootstrap5
 from flask_ckeditor import CKEditor
 from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user
@@ -233,6 +233,17 @@ def delete_product(product_id):
     db.session.delete(product)
     db.session.commit()
     return redirect(url_for('get_home'))
+
+
+@app.route('/policies')
+def show_document():
+    document = request.args.get('doc')
+    if document == 'privacy':
+        path = 'assets/privacidad.pdf'
+        return send_from_directory('static', path)
+    elif document == 'shipping':
+        path = 'assets/envio.pdf'
+        return send_from_directory('static', path)
 
 
 if __name__ == "__main__":
