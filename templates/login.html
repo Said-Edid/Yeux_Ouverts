@@ -17,6 +17,13 @@
             <img class="mb-4 img-fluid" src="{{ url_for('static', filename='/assets/logo.png') }}" alt="company logo" width="400">
         </a>
         <h1 class="h3 font-weight-normal">Por favor Inicia Sesión</h1>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                <p class="flashes">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
         <div class="mb-3">
             {{ form.csrf_token() }}
             {{ render_field(form.email, placeholder='Email', form_type='inline') }}

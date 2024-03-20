@@ -65,7 +65,7 @@ class Product(db.Model):
     img_url_three: Mapped[str] = mapped_column(String, unique=True, nullable=True)
     sizes: Mapped[str] = mapped_column(String, nullable=False)
     materials: Mapped[str] = mapped_column(String, nullable=False)
-    colors: Mapped[str] = mapped_column(String, nullable=False)
+    colors: Mapped[str] = mapped_column(String, nullable=True)
     other: Mapped[str] = mapped_column(String, nullable=True)
 
 
@@ -228,6 +228,7 @@ def edit_product(product_id):
 
 
 @app.route('/delete/<int:product_id>', methods=["GET"])
+@admin_only
 def delete_product(product_id):
     product = db.get_or_404(Product, product_id)
     db.session.delete(product)

@@ -37,6 +37,6 @@ class ProductForm(FlaskForm):
     img_url_three = StringField(label="Imagen 3 (opcional)")
     sizes = StringField(label="Tallas ejemplo: Ch, M, G", validators=[DataRequired()])
     materials = StringField(label="Materiales ejemplo: Algodón, Poliéster", validators=[DataRequired()])
-    colors = StringField(label="Colores disponibles", validators=[DataRequired()])
+    colors = StringField(label="Colores disponibles (opcional)")
     other = StringField(label="Otras características (opcional)")
     submit = SubmitField("Agregar Producto")

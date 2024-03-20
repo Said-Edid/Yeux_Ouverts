@@ -1,3 +1,16 @@
+/* Flash messages */
+
+.flashes {
+  list-style-type: none;
+  color: red;
+}
+
+/* Main Elements */
+
+body {
+    min-height: 100%;
+}
+
 /* Commentaries section */
 
 #commentary {
