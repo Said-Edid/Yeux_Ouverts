@@ -245,6 +245,9 @@ def show_document():
     elif document == 'shipping':
         path = 'assets/envio.pdf'
         return send_from_directory('static', path)
+    elif document == 'terms':
+        path = 'assets/terminos.pdf'
+        return send_from_directory('static', path)
 
 
 if __name__ == "__main__":
