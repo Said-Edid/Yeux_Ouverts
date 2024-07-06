@@ -1,7 +1,6 @@
 from forms import ContactForm, RegisterForm, LoginForm, ProductForm
 from flask import Flask, render_template, request, abort, redirect, url_for, flash, send_from_directory
 from flask_bootstrap import Bootstrap5
-from flask_ckeditor import CKEditor
 from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
