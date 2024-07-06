@@ -138,8 +138,6 @@ div .btn-cotizar:hover {
 /* Register Form */
 
 #name {
-    border-bottom-right-radius: 0 !important;
-    border-bottom-left-radius: 0 !important;
     margin-bottom: 0 !important;
 }
 
@@ -159,8 +157,6 @@ body > form > div > div:nth-child(3), .register-email {
 }
 
 body > form > div > div:nth-child(2), #email {
-    border-bottom-right-radius: 0 !important;
-    border-bottom-left-radius: 0 !important;
     margin-bottom: 0 !important;
 }
 
@@ -274,4 +270,8 @@ header.masthead .post-heading .meta a {
   header.masthead .post-heading .subheading {
     font-size: 1.875rem;
   }
+}
+
+.form-control {
+    border-radius:
 }
