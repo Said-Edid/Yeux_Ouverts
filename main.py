@@ -22,7 +22,6 @@ current_year = datetime.now().strftime("%Y")
 # Flask app configuration
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY')
-ckeditor = CKEditor(app)
 Bootstrap5(app)
 
 # Flask-Login for session status management
