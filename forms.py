@@ -1,7 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, EmailField, PasswordField
+from wtforms import StringField, SubmitField, EmailField, PasswordField, TextAreaField
 from wtforms.validators import DataRequired
-from flask_ckeditor import CKEditorField
 
 
 # WTForm rendered in contact.html
@@ -9,7 +8,7 @@ class ContactForm(FlaskForm):
     name = StringField(label="Nombre", validators=[DataRequired()])
     email = EmailField(label="Email", validators=[DataRequired()])
     phone = StringField(label="Teléfono", validators=[DataRequired()])
-    message = CKEditorField("Mensaje", validators=[DataRequired()])
+    message = TextAreaField("Mensaje", validators=[DataRequired()])
     submit = SubmitField("Enviar Mensaje")
 
 
