@@ -25,7 +25,6 @@
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <p class="inter-500">¿Quieres ponerte en contacto? Completa el siguiente formulario para enviarnos un mensaje y ¡nos comunicaremos contigo lo antes posible!</p>
                         <div class="my-5">
-                            {{ ckeditor.load(pkg_type='basic') }} {{ ckeditor.config(name='message') }}
                             {{ render_form(form, novalidate=True, button_map={'submit': 'dark'}) }}
                         </div>
                     </div>
